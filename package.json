@@ -1,0 +1,31 @@
+{
+  "name": "opencv-face-detection-extensions",
+  "version": "0.0.1",
+  "description": "Extensions for face detection using OpenCV",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orapouso/opencv-face-detection-extensions.git"
+  },
+  "keywords": [
+    "opencv",
+    "face",
+    "detection"
+  ],
+  "author": "Rafael Raposo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/orapouso/opencv-face-detection-extensions/issues"
+  },
+  "homepage": "https://github.com/orapouso/opencv-face-detection-extensions#readme",
+  "dependencies": {
+    "debug": "^2.6.0",
+    "opencv": "^6.0.0"
+  },
+  "devDependencies": {
+    "opencv": "^6.0.0"
+  }
+}
