@@ -22,8 +22,7 @@
   },
   "homepage": "https://github.com/orapouso/opencv-face-detection-extensions#readme",
   "dependencies": {
-    "debug": "^2.6.0",
-    "opencv": "^6.0.0"
+    "debug": "^2.6.0"
   },
   "devDependencies": {
     "opencv": "^6.0.0"
