@@ -7,9 +7,9 @@ Extensions for face detection using OpenCV. It needs an instance of `require('op
 const opencv = require('opencv')
 const opencv_ext = require('opencv-face-detection-extensions')(opencv)
 
-opencv_ext.smiles('./data/image1.jpg', {scale: 1.05, neighbor: 8, smileScale: 1.01})
+opencv_ext.smiles('./data/image1.jpg', {})
   .then((result) => {
-    console.log(result)
+    console.log('promised smiles', result.detections.length)
     result.detections.forEach((detection) => {
       detection.smiles.forEach((smile) => {
         let face = detection.face
@@ -17,6 +17,7 @@ opencv_ext.smiles('./data/image1.jpg', {scale: 1.05, neighbor: 8, smileScale: 1.
         
       })
     })
+    
     result.image.save('./data/out.jpg')
   })
   .catch((err) => {
@@ -79,6 +80,6 @@ opencv_ext.smiles(path, opts)
 
 options
  - scale: OpenCV [scaleFator](http://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html#cascadeclassifier-detectmultiscale) parameter
- - neighbor: OpenCV [minNeighbors](http://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html#cascadeclassifier-detectmultiscale) parameter
+ - neighbors: OpenCV [minNeighbors](http://docs.opencv.org/2.4/modules/objdetect/doc/cascade_classification.html#cascadeclassifier-detectmultiscale) parameter
  - smileScale: same as above but applied to the faces found in images
- - smileNeighbor: same as above but applied to the faces found in images
+ - smileNeighbors: same as above but applied to the faces found in images
